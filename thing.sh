@@ -1,0 +1,1 @@
+cd '/mnt/d/WSPA/BA-r3s6/Projekt zespołowy systemu informatycznego/uni-se-prj'
