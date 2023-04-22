@@ -13,7 +13,22 @@ export default {
 </script>
 
 <template>
-  <p>NavbarContainer</p>
-  <MiniCalendar/>
-  <TaskBar/>
+  <div class="navbar__container">
+    <p>NavbarContainer</p>
+    <MiniCalendar/>
+    <TaskBar/>
+  </div>
 </template>
+
+<style scoped>
+.navbar__container {
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  width: 100vw;
+  height: 20vh;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 25px;
+}
+</style>

@@ -1,17 +1,32 @@
+<script>
+import NavbarContainer from '../components/containers/NavbarContainer.vue';
+import ToolsContainer from '../components/containers/ToolsContainer.vue';
+import AboutPage from '../components/AboutPage.vue';
+
+export default {
+  components: {
+    NavbarContainer,
+    ToolsContainer,
+    AboutPage
+  }
+}
+</script>
+
 <template>
   <div class="about">
-    <h1>
-      Don't delete this just yet. Could be used for a nice little About page with
-      a GitHub repo link and all the technologies listed nicely (just because it'd look cool).
-    </h1>
+    <NavbarContainer/>
+    <ToolsContainer/>
+    <AboutPage/>
   </div>
+  <p>AboutView</p>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .about {
     min-height: 75vh; /* 75% viewport height */
     display: flex;
+    /* flex-direction: row; */
     align-items: center;
   }
 }

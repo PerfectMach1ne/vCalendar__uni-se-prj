@@ -19,16 +19,16 @@ export default {
       <ToolsContainer/>
       <CalendarContainer/>
     </div>
-    <p>HomeView</p>
   </main>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .home {
     min-height: 75vh; /* 75% viewport height */
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 }
 </style>
