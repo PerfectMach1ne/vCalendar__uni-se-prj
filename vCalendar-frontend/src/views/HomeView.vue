@@ -14,17 +14,19 @@ export default {
 
 <template>
   <main>
-    <NavbarContainer/>
-    <ToolsContainer/>
-    <CalendarContainer/>
-    <p>a</p>
+    <div class="home">
+      <NavbarContainer/>
+      <ToolsContainer/>
+      <CalendarContainer/>
+    </div>
+    <p>HomeView</p>
   </main>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
+  .home {
+    min-height: 75vh; /* 75% viewport height */
     display: flex;
     align-items: center;
   }

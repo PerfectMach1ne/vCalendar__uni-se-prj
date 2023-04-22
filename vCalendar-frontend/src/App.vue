@@ -3,22 +3,21 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <!-- 
-      Keeping this for <img> with assets/ usage reference.
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    -->
+  <!-- 
+    Keeping this for <img> with assets/ usage reference.
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <div class="wrapper">
-      <!-- <HelloWorld msg="You did it!" /> -->
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+  -->
+  <header>
+    <p>vCalendar logo should go there (and router links)</p>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </nav>
   </header>
-
-  <RouterView />
+  <div class="wrapper">
+    <!-- <HelloWorld msg="You did it!" /> -->
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>

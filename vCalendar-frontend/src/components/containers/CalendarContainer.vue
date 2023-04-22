@@ -9,6 +9,6 @@ export default {
 </script>
 
 <template>
-  <BigCalendar/>
   <p>CalendarContainer</p>
+  <BigCalendar/>
 </template>

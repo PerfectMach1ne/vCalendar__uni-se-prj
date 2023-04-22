@@ -5,5 +5,5 @@ export default {
 </script>
 
 <template>
-  <p>minicalendar</p>
+  <p>MiniCalendar</p>
 </template>
