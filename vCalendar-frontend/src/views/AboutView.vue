@@ -18,7 +18,6 @@ export default {
     <ToolsContainer/>
     <AboutPage/>
   </div>
-  <p>AboutView</p>
 </template>
 
 <style scoped>
@@ -27,7 +26,8 @@ export default {
     min-height: 75vh; /* 75% viewport height */
     display: flex;
     /* flex-direction: row; */
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 }
 </style>

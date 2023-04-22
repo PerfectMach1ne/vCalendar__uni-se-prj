@@ -19,5 +19,8 @@ export default {
   margin: 5px;
   border: 1px solid gray;
   padding: 5px;
+  width: calc(100vw - 238px - 70px); /* 238px = ToolsContainer width */
+  /* 70px is the widest AboutPage can be without being "sent downstairs";
+     it's aligned pixel-to-pixel with NavbarContainer */
 }
 </style>

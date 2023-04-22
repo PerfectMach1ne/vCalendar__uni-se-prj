@@ -2,14 +2,24 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
+<script>
+export default {
+  methods: {
+    goToHome() {
+      this.$router.push('/');
+    }
+  }
+}
+</script>
+
 <template>
   <!-- 
     Keeping this for <img> with assets/ usage reference.
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
   -->
   <header>
-    <img src="@/assets/logo.png" alt="vCalendar logo" class="logo" width="80" height="80"/>
-    <nav>
+    <img @click="goToHome" src="@/assets/logo.png" alt="vCalendar logo" class="logo" width="80" height="80"/>
+    <nav> <!-- do NOT mistake this with "Navbar" as in component NavbarContainer and all related components -->
       <RouterLink to="/" class="router">Home</RouterLink>
       <RouterLink to="/about" class="router">About</RouterLink>
     </nav>
@@ -37,6 +47,10 @@ footer {
   align-items: center;
   height: 2vh;
   gap: 20px;
+}
+
+img:hover {
+  cursor: pointer;
 }
 
 .router {
