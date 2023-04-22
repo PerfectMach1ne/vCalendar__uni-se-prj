@@ -21,6 +21,7 @@ export default {
     <img @click="goToHome" src="@/assets/logo.png" alt="vCalendar logo" class="logo" width="80" height="80"/>
     <nav> <!-- do NOT mistake this with "Navbar" as in component NavbarContainer and all related components -->
       <RouterLink to="/" class="router">Home</RouterLink>
+      <RouterLink to="/tasks" class="router">Tasks</RouterLink>
       <RouterLink to="/about" class="router">About</RouterLink>
     </nav>
   </header>
