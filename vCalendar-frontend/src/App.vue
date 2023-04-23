@@ -61,8 +61,22 @@ img:hover {
 }
 
 .router {
-  margin: 5px;
+  margin: 10px;
   border: 1px solid gray;
-  padding: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: indianred;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.router:hover {
+  background-color: tomato;
+  transition: all 0.3s ease;
+}
+
+.router:not(:hover) {
+  transition: all 0.3s ease;
 }
 </style>
