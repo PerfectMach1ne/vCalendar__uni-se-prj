@@ -7,6 +7,12 @@ export default {
   methods: {
     goToHome() {
       this.$router.push('/');
+    },
+    goToTasks() {
+      this.$router.push('/tasks');
+    },
+    goToAbout() {
+      this.$router.push('/about');
     }
   }
 }
@@ -20,9 +26,9 @@ export default {
   <header>
     <img @click="goToHome" src="@/assets/logo.png" alt="vCalendar logo" class="logo" width="80" height="80"/>
     <nav> <!-- do NOT mistake this with "Navbar" as in component NavbarContainer and all related components -->
-      <RouterLink to="/" class="router">Home</RouterLink>
-      <RouterLink to="/tasks" class="router">Tasks</RouterLink>
-      <RouterLink to="/about" class="router">About</RouterLink>
+      <button @click="goToHome" class="router">Home</button>
+      <button @click="goToTasks" class="router">Tasks</button>
+      <button @click="goToAbout" class="router">About</button>
     </nav>
   </header>
   <div class="wrapper">
