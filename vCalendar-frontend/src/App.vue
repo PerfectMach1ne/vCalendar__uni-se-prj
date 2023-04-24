@@ -74,6 +74,7 @@ img:hover {
 .router:hover {
   background-color: tomato;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .router:not(:hover) {

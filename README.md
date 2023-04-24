@@ -5,25 +5,94 @@ A project for a software engineering "group" project class from semester 6.
 English translation is located below the Polish requirement list.
 ### Wymagania niefunkcjonalne
 
-* a
+1. Frontend napisany w frameworku Vue.js 3.
+2. Obsługa zapytań HTTP w frontendzie za pomocą biblioteki Axios.
+3. Backend napisany Pythonie z frameworkiem FastAPI.
+4. Walidacja danych w backendzie za pomocą biblioteki Pydantic.
+5. Mapowanie obiektowo-relacyjne (Object-Relational Mapping; ORM) za pomocą biblioteki SQLAlchemy 2.0.
+6. Dane użytkownika są przechowywane w bazie danych z silnikiem SQLite 3.
+7. Komunikacja między backendem a bazą danych za pomocą narzędzia migracji bazy danych Alembic.
+8. Aplikacja webowa przyjmuje postać Single-Page Application (SPA).
+9. Strona internetowa aplikacji ładuje się w przeglądarce opartej na technologii Chromium nie dłużej niż 3 sekundy.
 
-### Funkcjonalne
+### Wymagania funkcjonalne
 
-* a
+1. Użytkownik musi założyć konto w bazie danych w celu korzystania z funkcjonalności kalendarza.
+2. Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.
+3. Główny kalendarz jest podzielony na 7 dni wybranego tygodnia z etykietami godzin oraz dni tygodnia.
+4. Miniaturowy kalendarz wyświetlający jedynie dni, miesiąc i rok oraz etykiety dni tygodnia.
+5. Możliwość dodania różnych form zadań i przypomnień.
+6. Możliwość usunięcia oraz modyfikacji wybranego zadania lub przypomnienia.
+7. Zadania posiadają tytuł, godzinę rozpoczęcia i zakończenia, styl (np. kolor lub motyw, opcjonalny do wybrania) oraz opcjonalny krótki opis/dodatkowe dane.
+8. Zadania dłuższe niż 2 dni są wyświetlane poza 7-dniowym kalendarzem.
+9. Przypomnienia zajmują ściśle ograniczoną ilość miejsca na 7-dniowym kalendarzu.
+10. Aplikacja wyświetla jedynie tyle danych w komponencie ile się zmieści.
+11. Komponent zadania można kliknąć aby wyświetlić w oddzielnym panelu całość danych zawieranych przez zadanie.
+12. Zadania można łączyć w grupy zadań.
+13. Można wyświetlić listę grup zadań w oddzielnej stronie wewnątrz aplikacji.
+14. Można podświetlić lub wyświetlić/ukryć zadania z wybranej grupy zadań.
+15. Zadaniom można nadawać priorytety, które są wykorzystywane przez aplikację do sugerowania lub podkreślania istotności wybranych zadań.
+16. [todo]
+
+## Harmonogram/Schedule
+
+##### **Legenda/legend:**
+**`F5`** = **F**unctional requirement 5.
+
+**`NF7`** = **N**on-**F**unctional requirement 7.
+
+**`FE.F5`** = **F**ront-**E**nd side of functional requirement 5.
+
+**`BE.F6`** = **B**ack-**E**nd side of functional requirement 6.
+
+| Date | Class | ToDo by EOC[^1] |
+| --- | --- | --- |
+| `13/04/2023` | ***I***st | General project documentation |
+| `12/05/2023` | ***II***nd | Prepare NF1, NF2, NF3, NF4, NF5, NF6, NF7; implement NF8, [] |
+| `19/05/2023` | ***III***rd | Implement [reqs here] |
+| `26/05/2023` | ***IV***th | Implement [reqs here] |
+| `30/05/2023` | ***V***th | Implement [reqs here] |
+| `02/06/2023` | ***VI***th | Implement [reqs here] |
+| `16/06/2023` | ***VII***th | Testing |
+| `21/06/2023` | ***VIII***th | Project presentation |
+
+[^1]: To do by the **E**nd **O**f a **C**lass.
 
 ## Requirements
 ### Non-functional requirements
 
-* a
+1. 
 
 ### Functional requirements
 
 * a
 
+## Project members
+
+**Chief Technology Officer**: me
+
+**Project Manager**: me
+
+**Software Analyst**: me
+
+**Frontend Engineer**: me
+
+**Backend Engineer**: me
+
+**Quality Assurance Engineer**: me
+
+**UI/UX Designer**: me
+
+**Graphic Design "Artist"**: me
+
+**Cafe Barista**: me
+
+**Scrum/Agile Master**: we don't need this guy.
+
 ## Technologies used
 * **Vue.js 3** (front-end JS framework)
 * **Axios** (HTTP client)
-* **npm** (for running frontend)
+* **npm** + **Vite** (for running frontend)
 * **FastAPI** (Python API framework)
 * **Pydantic** (API data validation)
 * **SQLAlchemy 2.0** (ORM)
