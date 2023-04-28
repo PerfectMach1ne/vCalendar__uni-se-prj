@@ -44,7 +44,8 @@ English translation is located below the Polish requirement list.
 13. Można wyświetlić listę grup zadań w oddzielnej stronie wewnątrz aplikacji.
 14. Można podświetlić lub wyświetlić/ukryć zadania z wybranej grupy zadań.
 15. Zadaniom można nadawać priorytety, które są wykorzystywane przez aplikację do sugerowania lub podkreślania istotności wybranych zadań.
-16. [todo]
+16. Logowanie użytkownika odbywa się za pomocą JSON Web Token-a.
+17. [todo]
 
 ## Harmonogram/Schedule
 
