@@ -3,3 +3,19 @@
   /* border: 5px solid purple; */
   padding: 5px;
 }
+
+.scrollbar {
+  overflow-y: scroll;
+  scrollbar-color: #000 #aaa;
+  scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; 
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+}

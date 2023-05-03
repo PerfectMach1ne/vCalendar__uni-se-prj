@@ -1,7 +1,7 @@
 <script>
 import NavbarContainer from '../components/containers/NavbarContainer.vue';
 import ToolsContainer from '../components/containers/ToolsContainer.vue';
-import AboutPage from '../components/AboutPage.vue';
+import AboutPage from '../components/pages/AboutPage.vue';
 
 export default {
   components: {

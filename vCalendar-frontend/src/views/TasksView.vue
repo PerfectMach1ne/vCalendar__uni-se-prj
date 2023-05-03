@@ -1,5 +1,5 @@
 <script>
-import TaskPage from '../components/TaskPage.vue';
+import TaskPage from '../components/pages/TaskPage.vue';
 
 export default {
   components: {

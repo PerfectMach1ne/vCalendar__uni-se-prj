@@ -45,7 +45,6 @@ English translation is located below the Polish requirement list.
 14. Można podświetlić lub wyświetlić/ukryć zadania z wybranej grupy zadań.
 15. Zadaniom można nadawać priorytety, które są wykorzystywane przez aplikację do sugerowania lub podkreślania istotności wybranych zadań.
 16. Logowanie użytkownika odbywa się za pomocą JSON Web Token-a.
-17. [todo]
 
 ## Harmonogram/Schedule
 
@@ -61,7 +60,7 @@ English translation is located below the Polish requirement list.
 | Date | Class | ToDo by EOC[^1] |
 | --- | --- | --- |
 | `13/04/2023` | ***I***st | General project documentation |
-| `12/05/2023` | ***II***nd | Prepare NF1, NF2, NF3, NF4, NF5, NF6, NF7; implement NF8, [] |
+| `12/05/2023` | ***II***nd | Prepare **`NF1`**, **`NF2`**, **`NF3`**, **`NF4`**, **`NF5`**, **`NF6`**, **`NF7`**; implement **`NF8`**, **`BE.F16`** |
 | `19/05/2023` | ***III***rd | Implement [reqs here] |
 | `26/05/2023` | ***IV***th | Implement [reqs here] |
 | `30/05/2023` | ***V***th | Implement [reqs here] |

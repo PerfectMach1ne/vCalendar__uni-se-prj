@@ -7,3 +7,7 @@ export default {
 <template>
   <p>BigCalendar</p>
 </template>
+
+<style>
+
+</style>
