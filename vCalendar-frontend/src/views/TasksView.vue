@@ -16,11 +16,11 @@ export default {
 
 <style scoped>
 @media (min-width: 1024px) {
-  .home {
-    min-height: 75vh; /* 75% viewport height */
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+  .tasks {
+    margin: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    min-height: 79vh;
   }
 }
 </style>

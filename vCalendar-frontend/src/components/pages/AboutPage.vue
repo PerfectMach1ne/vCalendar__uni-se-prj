@@ -33,7 +33,7 @@ export default {
   margin: 5px;
   border: 1px solid gray;
   padding: 5px;
-  width: 78.9vw; /* If it works, it works. */
+  width: 80vw; /* If it works, it works. */
   max-height: 56vh;
 }
 </style>

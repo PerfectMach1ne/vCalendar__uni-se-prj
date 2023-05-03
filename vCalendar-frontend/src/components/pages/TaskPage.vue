@@ -1,13 +1,11 @@
 <script>
-import TasksContainer from '../containers/TasksContainer.vue';
 
-export default {
-    components: { TasksContainer }
-}
 </script>
 
 <template>
-  <TasksContainer/>
+  <div class="scrollbar">
+    <p>test</p>
+  </div>
 </template>
 
 <style>
