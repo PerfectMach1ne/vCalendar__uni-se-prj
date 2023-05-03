@@ -19,3 +19,10 @@
 .scrollbar::-webkit-scrollbar-thumb {
   background: #000;
 }
+
+.scrollbar-vertical {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  scrollbar-color: #000 #aaa;
+  scrollbar-width: thin;
+}

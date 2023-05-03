@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="calendar__container scrollbar">
+  <div class="calendar__container scrollbar-vertical">
     <BigCalendar/>
   </div>
 </template>
@@ -18,8 +18,7 @@ export default {
 .calendar__container {
   margin: 5px;
   border: 1px solid gray;
-  padding: 5px;
-  width: 78.9vw;
-  max-height: 56vh;
+  width: 79.55vw;
+  max-height: 57.5vh;
 }
 </style>
