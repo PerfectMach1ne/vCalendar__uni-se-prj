@@ -15,7 +15,7 @@ export default {
   margin: 5px;
   border: 1px solid gray;
   padding: 5px;
-  width: 238px; /* any more and flexbox sends CalendarContainer downstairs */
-  height: calc(57vh - 1vh); /* same as above */
+  width: 15%; /* any more and flexbox sends CalendarContainer downstairs */
+  max-height: calc(57vh - 1vh); /* same as above */
 }
 </style>

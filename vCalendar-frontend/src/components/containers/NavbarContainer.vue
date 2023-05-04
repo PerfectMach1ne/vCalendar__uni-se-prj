@@ -25,8 +25,8 @@ export default {
   margin: 5px;
   border: 1px solid gray;
   padding: 5px;
-  width: 100vw;
-  height: 20vh;
+  width: revert;
+  height: 20vh; 
   display: inline-flex;
   flex-direction: row;
   gap: 25px;

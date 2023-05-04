@@ -26,3 +26,13 @@
   scrollbar-color: #000 #aaa;
   scrollbar-width: thin;
 }
+
+.scrollbar-vertical::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #aaa; 
+}
+
+.scrollbar-vertical::-webkit-scrollbar-thumb {
+  background: #000;
+}

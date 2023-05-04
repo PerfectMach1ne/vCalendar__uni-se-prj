@@ -32,8 +32,7 @@ export default {
 .about__page__container {
   margin: 5px;
   border: 1px solid gray;
-  padding: 5px;
-  width: 80vw; /* If it works, it works. */
   max-height: 56vh;
+  width: 85%
 }
 </style>

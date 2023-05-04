@@ -14,8 +14,8 @@ export default {
 
 <template>
   <main>
+    <NavbarContainer class="nav__isolator"/>
     <div class="home">
-      <NavbarContainer/>
       <ToolsContainer/>
       <CalendarContainer/>
     </div>
@@ -23,12 +23,19 @@ export default {
 </template>
 
 <style scoped>
-@media (min-width: 1024px) {
+.home {
+  display: flex;
+}
+
+.nav__isolator {
+  display: flex;
+  /* align-items: stretch; */
+/* 
   .home {
-    min-height: 75vh; /* 75% viewport height */
+    min-height: 75vh; /* 75% viewport height */ /*
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-  }
+  } */
 }
 </style>

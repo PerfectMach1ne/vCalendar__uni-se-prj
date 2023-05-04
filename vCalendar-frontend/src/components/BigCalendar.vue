@@ -40,15 +40,26 @@ export default {
       </p>
     </li>
   </ul>
-  <table>
-    <tr v-for="i in 24" v-bind:id="`${String(i).padStart(2, '0') + ':00'}`">
-      <th id="mon">mon</th>
-      <th id="tue">tue</th>
-      <th id="wed">wed</th>
-      <th id="thu">thu</th>
-      <th id="fri">fri</th>
-      <th id="sat">sat</th>
-      <th id="sun">sun</th>
+  <table id="7daycal">
+    <tr v-for="i in 25" v-bind:id="`${i == 1 ? 'weekday-labels' : String(i - 2).padStart(2, '0') + ':00'}`">
+      <div v-if="i - 1 == 0" class="table__day__labels">
+        <th id="mon-label">mon</th>
+        <th id="tue-label">tue</th>
+        <th id="wed-label">wed</th>
+        <th id="thu-label">thu</th>
+        <th id="fri-label">fri</th>
+        <th id="sat-label">sat</th>
+        <th id="sun-label ">sun</th>
+      </div>
+      <div v-else>
+        <th :id="`mon${i - 2}`">[]</th>
+        <th :id="`tue${i - 2}`">[]</th>
+        <th :id="`wed${i - 2}`">[]</th>
+        <th :id="`thu${i - 2}`">[]</th>
+        <th :id="`fri${i - 2}`">[]</th>
+        <th :id="`sat${i - 2}`">[]</th>
+        <th :id="`sun${i - 2}`">[]</th>
+      </div>
     </tr>
   </table>
 </template>
@@ -62,6 +73,11 @@ table, th {
 
 th {
   padding: 60px 50px;
+}
+
+.table__day__labels {
+  /* font-family: 'Fira Sans', sans-serif; */
+  font-variant-caps: small-caps;
 }
 
 .weekday__labels {

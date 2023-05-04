@@ -13,21 +13,19 @@ export default {
 </script>
 
 <template>
+  <NavbarContainer class="nav__isolator"/>
   <div class="about">
-    <NavbarContainer/>
     <ToolsContainer/>
     <AboutPage/>
   </div>
 </template>
 
 <style scoped>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 75vh; /* 75% viewport height */
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    align-content: flex-start;
-  }
+.about {
+  display: flex;
+}
+
+.nav__isolator {
+  display: flex;
 }
 </style>
