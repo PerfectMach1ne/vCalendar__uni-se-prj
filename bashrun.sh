@@ -18,8 +18,6 @@ get_script_dir () {
      echo "$DIR"
 }
 cd "$(get_script_dir)/vCalendar-backend/venv/Scripts"
-echo | pwd
 . ./activate
 cd ../../../
 tclsh "./run-stuff.tcl"
-read -p "" | echo "Press Enter to continue . . ."

@@ -29,6 +29,7 @@ while {$c != "q"} {
     run_npm
     break
   } elseif {$c == "b"} {
+    puts "Running backend . . ."
     set backend_dir "[file dirname [file normalize [info script]]]/vCalendar-backend"
     cd $backend_dir
     run_uvicorn $backend_dir
