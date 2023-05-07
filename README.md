@@ -11,6 +11,7 @@ A project for a software engineering "group" project class from semester 6.
 * **Alembic** (database migration tool)
 * **Uvicorn** (for running backend)
 * **SQLite 3** (database engine)
+* **tclsh/ActiveTcl** (app running scripts)
 * *~~Docker, something to run Docker~~ <- only if I'll feel like it and have time*
 
 ## Requirements (🇵🇱) / Wymagania
