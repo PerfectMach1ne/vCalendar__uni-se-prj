@@ -13,7 +13,6 @@ proc run_npm {} {
   exec >&@stdout npm run dev ;# >&@stdout is shorthand for showing exec output instead of capturing it
 }
 
-
 proc run_uvicorn {dir} {
   # exec >&@stdout $dir/venv/Scripts/activate ;# Activate venv
   catch {exec >&@stdout cmd /c $dir/venv/Scripts/activate.bat} err
@@ -32,6 +31,7 @@ while {$c != "q"} {
   } elseif {$c == "b"} {
     set backend_dir "[file dirname [file normalize [info script]]]/vCalendar-backend"
     cd $backend_dir
+    puts $backend_dir
     run_uvicorn $backend_dir
     break
   } elseif {$c == "fb" || $c == "bf" || $c == "f+b"} {
