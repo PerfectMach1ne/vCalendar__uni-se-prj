@@ -1,2 +1,8 @@
+:: %~dp0 is Win Batch's insane way of getting current directory.
 @echo off
-tclsh "D:/Programming/uni-se-prj/run-stuff.tcl"
+:: Beloved Tcl's only limitation - cooperation with venv's activate scripts.
+:: Without the line directly below, the "standalone script" just won't work.
+:: venv needs to be activated "from the outside".
+:: I tried to make it run on Bash scripts too, and I respectfully don't think I'm going to try again.
+call "%~dp0\vCalendar-backend\venv\Scripts\activate.bat"
+tclsh "%~dp0run-stuff.tcl"

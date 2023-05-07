@@ -1,7 +1,9 @@
 import sqlite3
-import fastapi
+from fastapi import FastAPI
 
 from playground.sqlite_test import create_connection
+
+app = FastAPI()
 
 print("please work already")  # yeeeees
 
