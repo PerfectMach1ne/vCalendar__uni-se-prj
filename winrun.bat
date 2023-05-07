@@ -1,3 +1,3 @@
 :: wasted 48 mins of my life and it still doesn't work
 @echo off
-wsl bash -c "./thing.sh"
+tclsh "D:/Programming/uni-se-prj/run-stuff.tcl"
