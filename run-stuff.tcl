@@ -1,11 +1,13 @@
 #! /usr/bin/env tclsh
+
+# Needs to be ran in a "wrapper script" due to issues with venv's activation and 
+# lack of straightforward support for Tcl scripts.
 catch {console show}
 
 puts "Tcl web app runner"
 puts "q - quit terminal"
 puts "f - run frontend"
 puts "b - run backend"
-puts "fb/bf/f+b - run frontend and backend both"
 flush stdout ;# prevent gets stdin from behaving weirdly with the output
 set c [string tolower [gets stdin]] ;# read 1 character from stdin channel
 
@@ -34,9 +36,7 @@ while {$c != "q"} {
     cd $backend_dir
     run_uvicorn $backend_dir
     break
-  } elseif {$c == "fb" || $c == "bf" || $c == "f+b"} {
-    puts stderr "Not implemented yet."
-  } else {
+  } else {    
     puts stderr "Invalid input"
   }
   flush stdout
