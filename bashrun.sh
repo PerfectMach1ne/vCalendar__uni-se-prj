@@ -5,6 +5,8 @@
 # WSL is a lovely disaster, I guess!
 # Launch "c:\Program Files\Git\bin\bash.exe"
 # or "# Launch "c:\Program Files\Git\git-bash.exe"
+#
+# https://stackoverflow.com/questions/59895/how-do-i-get-the-directory-where-a-bash-script-is-located-from-within-the-script
 get_script_dir () {
      SOURCE="${BASH_SOURCE[0]}"
      # While $SOURCE is a symlink, resolve it

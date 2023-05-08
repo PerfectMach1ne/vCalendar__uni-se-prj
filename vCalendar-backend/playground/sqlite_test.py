@@ -13,3 +13,6 @@ def create_connection(db_file):
     finally:
         if conn:
             conn.close()
+    cur = conn.cursor()
+    cur.execute("CREATE TABLE test(col1, col2)")
+    conn.commit()
