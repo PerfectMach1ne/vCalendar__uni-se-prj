@@ -17,6 +17,7 @@ export default {
 <style scoped>
 .calendar__container {
   margin: 5px;
+  padding: 0;
   border: 1px solid gray;
   max-height: 56vh;
   width: 85%
