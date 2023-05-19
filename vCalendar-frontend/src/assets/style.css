@@ -74,3 +74,63 @@ img:hover {
 .scrollbar-vertical::-webkit-scrollbar-thumb {
   background: #000;
 }
+
+/* BigCalendar styling */
+
+.wrapper__big__calendar {
+  margin: 0;
+  padding: 0;
+}
+
+.weekday__box {
+  display: inline-flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filler__box {
+  border: 1px solid lightgray;
+  margin: 0;
+  padding: 0;
+  content: 0;
+  width: 60px;
+}
+
+.weekday__label {
+  border: 1px solid lightgray;
+  margin: 0;
+  padding: 25px 34px;
+  content: 0;
+  min-width: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.calendar__hour__row {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  content: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.hour__box {
+  border: 1px solid lightgray;
+  margin: 0;
+  padding: 24.8px 0;
+  content: 0;
+  width: 60px;
+  text-align: center;
+}
+
+.hour__row__day {
+  border: 1px solid lightgray;
+  margin: 0;
+  padding: 34px;
+  content: 0;
+  min-width: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
