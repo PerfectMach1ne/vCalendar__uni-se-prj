@@ -26,7 +26,7 @@ export default {
         <div class="hour__box">
           {{ String(i - 1).padStart(2, '0') + ':00' }}
         </div>
-        <div v-for="i in 7" class="hour__row__day">
+        <div v-for="j in 7" :id="`${weekdayArray[j - 1].substring(0,3)}${i - 1}`" class="hour__row__day">
         </div>
       </div>
     </div>

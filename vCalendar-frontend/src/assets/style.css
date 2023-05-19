@@ -1,4 +1,4 @@
-/* General global styling */
+/***************************************** General global styling */
 
 img:hover {
   cursor: pointer;
@@ -37,7 +37,7 @@ img:hover {
   background: #000;
 }
 
-/* App component styling */
+/***************************************** App component styling */
 
 header, footer {
   display: inline-flex;
@@ -55,6 +55,7 @@ footer {
   gap: 20px;
 }
 
+/* Button attached to Vue router */
 .router {
   margin: 10px;
   border: 1px solid gray;
@@ -76,7 +77,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Home (calendar) page styling */
+/***************************************** Home (calendar) page styling */
 
 .home {
   display: flex;
@@ -109,7 +110,7 @@ footer {
   width: 85%
 }
 
-/* Task page styling */
+/***************************************** Task page styling */
 
 .tasks {
   display: flex;
@@ -123,7 +124,7 @@ footer {
   width: 100%;
 }
 
-/* About page styling */
+/***************************************** About page styling */
 
 .about {
   display: flex;
@@ -137,7 +138,7 @@ footer {
   width: 85%
 }
 
-/* BigCalendar styling */
+/***************************************** BigCalendar styling */
 
 .wrapper__big__calendar {
   margin: 0;
@@ -167,6 +168,7 @@ footer {
   min-width: 150px;
   text-align: center;
   vertical-align: middle;
+  font-variant-caps: small-caps;
 }
 
 .calendar__hour__row {
