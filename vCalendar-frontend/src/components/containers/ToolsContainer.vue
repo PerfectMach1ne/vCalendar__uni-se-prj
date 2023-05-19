@@ -9,13 +9,3 @@ export default {
     <p>ToolsContainer</p>
   </div>
 </template>
-
-<style >
-.tools__container {
-  margin: 5px;
-  border: 1px solid gray;
-  padding: 5px;
-  width: 15%;
-  max-height: calc(57vh - 1vh); /* same as above */
-}
-</style>
