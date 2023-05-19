@@ -29,7 +29,8 @@ English translation is located below the Polish requirement list.
 6. ✅Dane użytkownika są przechowywane w bazie danych z silnikiem SQLite 3.
 7. ✅Komunikacja między backendem a bazą danych za pomocą narzędzia migracji bazy danych Alembic.
 8. ✅Aplikacja webowa przyjmuje postać Single-Page Application (SPA).
-9. Strona internetowa aplikacji ładuje się w przeglądarce opartej na technologii Chromium nie dłużej niż 3 sekundy.10. 🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.
+9. Strona internetowa aplikacji ładuje się w przeglądarce opartej na technologii Chromium nie dłużej niż 3 sekundy
+10. 🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.
 
 ### Wymagania funkcjonalne
 
