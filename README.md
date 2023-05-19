@@ -34,7 +34,7 @@ English translation is located below the Polish requirement list.
 ### Wymagania funkcjonalne
 
 1. 🅱❎Użytkownik musi założyć konto w bazie danych w celu korzystania z funkcjonalności kalendarza.
-~~2. 🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.~~
+2. ~~🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.~~
 3. 🅵✅Główny kalendarz jest podzielony na 7 dni wybranego tygodnia z etykietami godzin oraz dni tygodnia.
 4. Miniaturowy kalendarz wyświetlający jedynie dni, miesiąc i rok oraz etykiety dni tygodnia.
 5. Możliwość dodania różnych form zadań i przypomnień.
