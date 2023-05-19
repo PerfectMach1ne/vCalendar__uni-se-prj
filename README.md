@@ -63,27 +63,31 @@ English translation is located below the Polish requirement list.
 
 **`FEBE.F13`** = **F**ront-**E**nd & **B**ack-**E**nd side of functional requirement 13. (wymaganie funkcjonalne 13. dla frontendu i backendu).
 
-| Date | Class | ToDo by EOC[^1] |
+| Data/Date | Zajęcia/Class | ToDo by EOC[^1] |
 | --- | --- | --- |
 | `13/04/2023` | ***I***st | General project documentation |
 | `12/05/2023` | ***II***nd | Prepare **`NF1`**, **`NF2`**, **`NF3`**, **`NF4`**, **`NF5`**, **`NF6`**, **`NF7`**; implement **`NF8`** |
-| `19/05/2023` | ***III***rd | Implement **`FE.F2`**, **`FE.F3`**, **`FE.F4`**, **`FEBE.F5`**, **`FEBE.F6`**, **`FE.F7`**, **`FE.F9`** |
+| `19/05/2023` | ***III***rd | Implement **`FE.F2`**, **`FE.F3`**, **`FE.F4`**, **`FEBE.F5`**, **`FEBE.F6`**, **`FE.F7`**, **`FE.F9`** |d
 | `26/05/2023` | ***IV***th | Implement **`FE.F8`**, **`FE.F10`**, **`FE.F11`**, **`FEBE.F12`**, **`FE.F14`**, **`FEBE.F15`** |
 | `30/05/2023` | ***V***th | Implement **`FE.F13`**, **`FEBE.F15`**; begin impementing **`FEBE.F13`**, **`FEBE.F16`** |
 | `02/06/2023` | ***VI***th | Implement **`FEBE.F13`**, **`FEBE.F16`** |
 | `16/06/2023` | ***VII***th | Testing |
 | `21/06/2023` | ***VIII***th | Project presentation |
 
-[^1]: To do by the **E**nd **O**f a **C**lass.
+[^1]: To do by the **E**nd **O**f a **C**lass (do zakończenia pod koniec danych zajęć).
+
+## Database model
+
+
 
 ## Requirements
 ### Non-functional requirements
 
-1. 
+1. Translation WIP
 
 ### Functional requirements
 
-* a
+* Translation WIP
 
 ## Project members
 

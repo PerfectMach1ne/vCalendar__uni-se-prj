@@ -11,13 +11,24 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    is_active = Column(Boolean, default=True)
 
-    items = relationship("Item", back_populates="owner")
+    calendar = relationship("Calendar", back_populates="owner")
 
 
-class Item(Base):
-    __tablename__ = "items"
+class Calendar(Base):
+    __tablename__ = "calendars"
+    __table_args__ = {'extend_existing': True}
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, index=True)
+
+    owner = relationship("User", back_populates="calendar")
+
+
+
+
+class Event(Base):
+    __tablename__ = "events"
     __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True, index=True)
@@ -26,3 +37,7 @@ class Item(Base):
     owner_id = Column(Integer, ForeignKey("users.id"))
 
     owner = relationship("User", back_populates="items")
+
+
+class Task(Base):
+    __tablename__ = "tasks"
