@@ -29,17 +29,17 @@ English translation is located below the Polish requirement list.
 6. ✅Dane użytkownika są przechowywane w bazie danych z silnikiem SQLite 3.
 7. ✅Komunikacja między backendem a bazą danych za pomocą narzędzia migracji bazy danych Alembic.
 8. ✅Aplikacja webowa przyjmuje postać Single-Page Application (SPA).
-9. Strona internetowa aplikacji ładuje się w przeglądarce opartej na technologii Chromium nie dłużej niż 3 sekundy.
+9. Strona internetowa aplikacji ładuje się w przeglądarce opartej na technologii Chromium nie dłużej niż 3 sekundy.10. 🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.
 
 ### Wymagania funkcjonalne
 
 1. 🅱❎Użytkownik musi założyć konto w bazie danych w celu korzystania z funkcjonalności kalendarza.
-2. 🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.
+~~2. 🅵✅Strona jest podzielona na "kontenery" kalendarza, paska nawigacyjnego oraz bocznej sekcji pomocniczej.~~
 3. 🅵✅Główny kalendarz jest podzielony na 7 dni wybranego tygodnia z etykietami godzin oraz dni tygodnia.
 4. Miniaturowy kalendarz wyświetlający jedynie dni, miesiąc i rok oraz etykiety dni tygodnia.
 5. Możliwość dodania różnych form zadań i przypomnień.
 6. Możliwość usunięcia oraz modyfikacji wybranego zadania lub przypomnienia.
-7. Zadania posiadają tytuł, godzinę rozpoczęcia i zakończenia, styl (np. kolor lub motyw, opcjonalny do wybrania) oraz opcjonalny krótki opis/dodatkowe dane.
+7. Użytkownik może nadać zadaniu lub przypomnieniu tytuł, godzinę rozpoczęcia i zakończenia, opcjonalny styl (np. kolor lub motyw do wybrania) oraz opcjonalny krótki opis/dodatkowe dane.
 8. Zadania dłuższe niż 2 dni są wyświetlane poza 7-dniowym kalendarzem.
 9. Przypomnienia zajmują ściśle ograniczoną ilość miejsca na 7-dniowym kalendarzu.
 10. Aplikacja wyświetla jedynie tyle danych w komponencie ile się zmieści.
@@ -67,7 +67,7 @@ English translation is located below the Polish requirement list.
 | --- | --- | --- |
 | `13/04/2023` | ***I***st | General project documentation |
 | `12/05/2023` | ***II***nd | Prepare **`NF1`**, **`NF2`**, **`NF3`**, **`NF4`**, **`NF5`**, **`NF6`**, **`NF7`**; implement **`NF8`** |
-| `19/05/2023` | ***III***rd | Implement **`FE.F2`**, **`FE.F3`**, **`FE.F4`**, **`FEBE.F5`**, **`FEBE.F6`**, **`FE.F7`**, **`FE.F9`** |d
+| `19/05/2023` | ***III***rd | Implement **`NF2`**, **`FE.F3`**, **`FE.F4`**, **`FEBE.F5`**, **`FEBE.F6`**, **`FE.F7`**, **`FE.F9`** |d
 | `26/05/2023` | ***IV***th | Implement **`FE.F8`**, **`FE.F10`**, **`FE.F11`**, **`FEBE.F12`**, **`FE.F14`**, **`FEBE.F15`** |
 | `30/05/2023` | ***V***th | Implement **`FE.F13`**, **`FEBE.F15`**; begin impementing **`FEBE.F13`**, **`FEBE.F16`** |
 | `02/06/2023` | ***VI***th | Implement **`FEBE.F13`**, **`FEBE.F16`** |

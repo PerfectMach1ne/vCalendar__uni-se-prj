@@ -1,26 +1,26 @@
 <script>
-import TaskPage from '../components/pages/TaskPage.vue';
+import TaskContainer from '../components/containers/TaskContainer.vue';
 
 export default {
   components: {
-    TaskPage
+    TaskContainer
   }
 }
 </script>
 
 <template>
   <div class="tasks">
-    <TaskPage/>
+    <TaskContainer/>
   </div>
 </template>
 
 <style scoped>
-@media (min-width: 1024px) {
-  .tasks {
-    margin: 5px;
-    border: 1px solid gray;
-    padding: 5px;
-    min-height: 79vh;
-  }
+
+.tasks {
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  min-height: 79vh;
 }
+
 </style>

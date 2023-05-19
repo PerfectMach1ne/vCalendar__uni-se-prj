@@ -7,7 +7,3 @@
     <p>test</p>
   </div>
 </template>
-
-<style>
-
-</style>

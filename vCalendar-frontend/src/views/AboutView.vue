@@ -1,13 +1,13 @@
 <script>
 import NavbarContainer from '../components/containers/NavbarContainer.vue';
 import ToolsContainer from '../components/containers/ToolsContainer.vue';
-import AboutPage from '../components/pages/AboutPage.vue';
+import AboutContainer from '../components/containers/AboutContainer.vue';
 
 export default {
   components: {
     NavbarContainer,
     ToolsContainer,
-    AboutPage
+    AboutContainer
   }
 }
 </script>
@@ -16,7 +16,7 @@ export default {
   <NavbarContainer class="nav__isolator"/>
   <div class="about">
     <ToolsContainer/>
-    <AboutPage/>
+    <AboutContainer/>
   </div>
 </template>
 
