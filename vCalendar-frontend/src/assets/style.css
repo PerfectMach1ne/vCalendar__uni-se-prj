@@ -1,4 +1,44 @@
+/* General global styling */
+
+img:hover {
+  cursor: pointer;
+}
+
+.scrollbar {
+  overflow-y: scroll;
+  scrollbar-color: #000 #aaa;
+  scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; 
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.scrollbar-vertical {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  scrollbar-color: #000 #aaa;
+  scrollbar-width: thin;
+}
+
+.scrollbar-vertical::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #aaa; 
+}
+
+.scrollbar-vertical::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
 /* App component styling */
+
 header, footer {
   display: inline-flex;
   justify-content: flex-start;
@@ -36,43 +76,38 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Global styling */
+/* Home (calendar) page styling */
 
-img:hover {
-  cursor: pointer;
+.home {
+  display: flex;
 }
 
-.scrollbar {
-  overflow-y: scroll;
-  scrollbar-color: #000 #aaa;
-  scrollbar-width: thin;
+/* Task page styling */
+
+.tasks {
+  display: flex;
 }
 
-.scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaa; 
+.task__container {
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 5px;
+  min-height: 77.6vh;
+  width: 100%;
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+/* About page styling */
+
+.about {
+  display: flex;
 }
 
-.scrollbar-vertical {
-  overflow-y: scroll;
-  overflow-x: scroll;
-  scrollbar-color: #000 #aaa;
-  scrollbar-width: thin;
-}
-
-.scrollbar-vertical::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background-color: #aaa; 
-}
-
-.scrollbar-vertical::-webkit-scrollbar-thumb {
-  background: #000;
+.about__container {
+  border: 1px solid gray;
+  margin: 5px;
+  padding: 5px;
+  max-height: 56vh;
+  width: 85%
 }
 
 /* BigCalendar styling */

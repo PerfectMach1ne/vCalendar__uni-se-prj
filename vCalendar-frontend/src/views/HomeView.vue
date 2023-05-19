@@ -23,19 +23,7 @@ export default {
 </template>
 
 <style scoped>
-.home {
-  display: flex;
-}
-
 .nav__isolator {
   display: flex;
-  /* align-items: stretch; */
-/* 
-  .home {
-    min-height: 75vh; /* 75% viewport height */ /*
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-  } */
 }
 </style>

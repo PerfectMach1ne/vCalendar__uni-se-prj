@@ -21,10 +21,6 @@ export default {
 </template>
 
 <style scoped>
-.about {
-  display: flex;
-}
-
 .nav__isolator {
   display: flex;
 }
