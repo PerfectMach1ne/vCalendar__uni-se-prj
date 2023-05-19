@@ -10,7 +10,7 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style >
 .tools__container {
   margin: 5px;
   border: 1px solid gray;

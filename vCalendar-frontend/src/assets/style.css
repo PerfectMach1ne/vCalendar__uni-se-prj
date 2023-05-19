@@ -82,6 +82,33 @@ footer {
   display: flex;
 }
 
+.navbar__container {
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  width: revert;
+  height: 20vh; 
+  display: inline-flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.tools__container {
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  width: 15%;
+  max-height: calc(57vh - 1vh); /* same as above */
+}
+
+.calendar__container {
+  margin: 5px;
+  padding: 0;
+  border: 1px solid gray;
+  max-height: 56vh;
+  width: 85%
+}
+
 /* Task page styling */
 
 .tasks {
