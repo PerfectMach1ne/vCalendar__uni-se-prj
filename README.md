@@ -79,7 +79,7 @@ English translation is located below the Polish requirement list.
 
 ## Database model
 
-
+![ERD model (vCalendar-backend/database_erd.png)](./vCalendar-backend/database_erd.png)
 
 ## Requirements
 ### Non-functional requirements
