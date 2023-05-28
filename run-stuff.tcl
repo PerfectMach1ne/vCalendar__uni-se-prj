@@ -8,6 +8,7 @@ puts "Tcl web app runner"
 puts "q - quit terminal"
 puts "f - run frontend"
 puts "b - run backend"
+puts "s - run SQLite CLI (Win)"
 flush stdout ;# prevent gets stdin from behaving weirdly with the output
 set c [string tolower [gets stdin]] ;# read 1 character from stdin channel
 
@@ -36,6 +37,11 @@ while {$c != "q"} {
     cd $backend_dir
     run_uvicorn $backend_dir
     break
+  } elseif {$c == "s"} {
+    puts "Command to open the database in the CLI:"
+    puts "./vCalendar-backend/database/maindb.db"
+    # This smoothbrainedly assumes that SQLite CLI is installed in this directory and that you're using Windows
+    exec >&@stdout {c:\sqlite\sqlite3.exe}
   } else {    
     puts stderr "Invalid input"
   }
