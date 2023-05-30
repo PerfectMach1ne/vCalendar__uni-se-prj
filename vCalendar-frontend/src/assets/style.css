@@ -172,6 +172,23 @@ button.tools__button:not(:hover) {
   padding: 0;
 }
 
+.yearmonth__display {
+  display: inline-flex;
+  gap: 15px;
+  border: 1px solid lightgray;
+  margin: 0;
+  padding: 20px 0;
+  content: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant-caps: small-caps;
+  font-size: 1.5rem;
+  color: #424242;
+}
+
+.long__task__display {
+  display: flex;
+}
+
 .weekday__box {
   display: inline-flex;
   list-style-type: none;

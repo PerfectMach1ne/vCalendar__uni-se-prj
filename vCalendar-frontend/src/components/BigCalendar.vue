@@ -1,21 +1,107 @@
 <script>
 export default {
   data() {
-    return { }
+    return {
+      weekdayBoxWidth: '',
+      currentWeek: 18, // throwaway default value 
+      currentMonths: 'Aug - Sep', // throwaway default value 
+      currentFirstWeekday: 0,
+      currentLastWeekday: 0,
+      currentYear: 2020, // throwaway default value 
+    }
   },
   computed: {
     weekdayArray() {
       return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    },
+    monthNames() {
+      return ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+       "October", "November", "December"];
     }
+  },
+  methods: {
+    getTodaysWeek() {
+      var currentDate = new Date(); // get current date
+      var startYearDate = new Date(currentDate.getFullYear(), 0, 1); // get 1st January of today's year
+
+      var daysInYear = Math.floor( (currentDate - startYearDate) / (24 * 60 * 60 * 1000) ); // count year days passed so far
+      var weekNumeral = Math.ceil(daysInYear / 7); // evaluate the number of the week from all days in year
+
+      return weekNumeral;
+    },
+    getTodaysMonths() {
+      var currentDate = new Date(); // get current date
+
+      var firstWeekdayMonth = currentDate.getMonth(); // evaluate month at first day of the week
+      var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1; // evaluate the first day of today's week
+      var lastWeekdayMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + 6).getMonth(); // evaluate month at last day of the week
+
+      if (firstWeekdayMonth == lastWeekdayMonth)
+        return this.monthNames[firstWeekdayMonth];
+      else
+        return this.monthNames[firstWeekdayMonth] + ' - ' + this.monthNames[lastWeekdayMonth];
+    },
+    getFirstLastWeekday() {
+      var currentDate = new Date(); // get current date
+      // (current day) - (how many days of the week have already "taken place") + 1 correction day
+      var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1; // evaluate the first day of today's week
+      var lastMonthDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + 6).getDate(); // evaluate the last day of today's week
+
+      return [firstMonthDay, lastMonthDay];
+    },
+    getTodaysYear() {
+      return new Date().getFullYear();
+    },
+    getWeekSpecificDateFoolproof(dayOffset) {
+      var currentDate = new Date(); // get current date
+
+      var returnDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), + dayOffset).getDate();
+
+      return returnDate;
+    }
+  },
+  mounted() {
+    // Load the current data
+    this.currentWeek = this.getTodaysWeek();
+    this.currentMonths = this.getTodaysMonths();
+    this.currentFirstWeekday = this.getFirstLastWeekday()[0];
+    this.currentLastWeekday = this.getFirstLastWeekday()[1];
+    this.currentYear = this.getTodaysYear();
+
+    // silly testing
+    console.log(this.currentWeek + ', ' + this.currentMonths + ', ' + this.currentFirstWeekday + ', ' + this.currentLastWeekday + ', ' + this.currentYear)
+    
+    // Easy fix for yearmonth__display class element being sized correctly - steal weekday__box's width after render. >:)
+    this.weekdayBoxWidth = document.getElementById('weekdaybox-width-source').offsetWidth + 'px';
+    // console.log(document.getElementById('weekdaybox-width-source').offsetWidth + 'px');
   }
 }
 </script>
 
 <template>
   <div class="wrapper__big__calendar">
-    <ul class="weekday__box">
+    <div class="yearmonth__display" :style="{ width: weekdayBoxWidth }">
+      <div class="lazy__filler__box" :style="{
+        width: '15px'
+      }"></div>
+      <span>&#10094;</span> <!-- move "left" button -->
+      <span>&#10095;</span> <!-- move "right" button -->
+      <span>&bull;</span>
+      <span id="year__label">{{ currentYear }}</span>
+      <span>&bull;</span>
+      <span id="month__label">{{ currentMonths }}</span>
+      <span>&bull;</span>
+      <span id="week__label">Week {{ currentWeek }}</span>
+    </div>
+    <div class="long__task__display">
+      <!-- TODO for that specific feature later; NOTE: it is to only appear when relevant -->
+    </div>
+    <ul class="weekday__box" id="weekdaybox-width-source">
       <li class="filler__cell"></li>
       <li v-for="i in 7" class="weekday__label">
+        <p>
+          {{ getWeekSpecificDateFoolproof(i - 1) }}
+        </p>
         <p>
           {{ weekdayArray[i - 1] }}
         </p>
