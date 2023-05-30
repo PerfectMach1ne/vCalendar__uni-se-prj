@@ -296,7 +296,13 @@ button.change__week:not(:hover) {
   font-size: 1.2rem;
 }
 
-div.event__page__box > button {
+.event__page__buttons {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+div.event__page__buttons > button {
   margin: 0;
   border: 1px solid gray;
   padding: 10px 20px;
@@ -307,12 +313,12 @@ div.event__page__box > button {
   color: #000;
 }
 
-div.event__page__box > button:hover {
+div.event__page__buttons > button:hover {
   background-color: turquoise;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-div.event__page__box > button:not(:hover) {
+div.event__page__buttons > button:not(:hover) {
   transition: all 0.3s ease;
 }

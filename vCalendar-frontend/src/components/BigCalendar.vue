@@ -36,7 +36,7 @@ export default {
     },
     getTodaysMonths() {
       var currentDate = new Date(); // get current date
-
+      // (current day) - (how many days of the week have already "taken place") + 1 correction day
       var firstWeekdayMonth = currentDate.getMonth(); // evaluate month at first day of the week
       var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1; // evaluate the first day of today's week
       var lastWeekdayMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + 6).getMonth(); // evaluate month at last day of the week
@@ -60,8 +60,8 @@ export default {
     getWeekSpecificDateFoolproof(dayOffset) {
       var currentDate = new Date(); // get current date
 
-      // THIS IS NOT CALCULATING THE DAY IN THE DAY PART CORRECTLY; FIX THIS
-      var returnDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), dayOffset).getDate();
+      var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1; // evaluate the first day of today's week
+      var returnDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + dayOffset).getDate();
 
       return returnDate;
     },

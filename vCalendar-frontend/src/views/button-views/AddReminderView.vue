@@ -8,7 +8,9 @@ export default {
     }
   },
   methods: {
-    
+    cancel() {
+      this.$router.push('/')
+    } 
   }
 }
 </script>
@@ -32,7 +34,11 @@ export default {
           <option v-for="i in 24" v-bind:value="`${String(i - 1).padStart(2, '0') + ':00'}`"></option>
         </datalist>
       </span> -->
-      <button>Create</button>
+      <div class="event__page__buttons">
+        <button>Create</button>
+        <button @click="cancel">Cancel</button>
+      </div>
+      
     </div>
   </div>
 </template>
