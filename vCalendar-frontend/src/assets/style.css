@@ -37,7 +37,7 @@ img:hover {
   background: #000;
 }
 
-/***************************************** App component styling */
+/***************************************** basic App component styling */
 
 header, footer {
   display: inline-flex;
@@ -102,6 +102,7 @@ footer {
   max-height: calc(57vh - 1vh); /* same as above */
 }
 
+/* Buttons for adding/deleting events in tools bar */
 button.tools__button {
   margin: 5px;
   border: 1px solid gray;
@@ -125,8 +126,8 @@ button.tools__button:not(:hover) {
 
 .calendar__container {
   margin: 5px;
-  padding: 0;
   border: 1px solid gray;
+  padding: 0;
   max-height: 56vh;
   width: 85%
 }
@@ -138,8 +139,8 @@ button.tools__button:not(:hover) {
 }
 
 .task__container {
-  border: 1px solid gray;
   margin: 5px;
+  border: 1px solid gray;
   padding: 5px;
   min-height: 77.6vh;
   width: 100%;
@@ -152,9 +153,9 @@ button.tools__button:not(:hover) {
 }
 
 .about__container {
-  border: 1px solid gray;
   margin: 5px;
-  padding: 5px;
+  border: 1px solid gray;
+  padding: 0;
   max-height: 56vh;
   width: 85%
 }
