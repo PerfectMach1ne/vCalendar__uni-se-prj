@@ -63,6 +63,13 @@ export default {
       var returnDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), + dayOffset).getDate();
 
       return returnDate;
+    },
+    // ChangeWeek.vue events
+    goToPastWeek() {
+      console.log("goToPastWeek ToDo")
+    },
+    goToFutureWeek() {
+      console.log("goToFutureWeek ToDo")
     }
   },
   mounted() {
@@ -89,9 +96,13 @@ export default {
       <div class="lazy__filler__box" :style="{
         width: '15px'
       }"></div>
-      <ChangeWeek :character="left" />
+      <ChangeWeek
+        :character="left"
+        @past-week="goToPastWeek()" />
       <!-- <span>&#10094;</span> move "left" button -->
-      <ChangeWeek :character="right" />
+      <ChangeWeek
+        :character="right"
+        @future-week="goToFutureWeek()" />
       <!-- <span>&#10095;</span> move "right" button -->
       <div class="lazy__filler__box" :style="{
         width: '7px'
