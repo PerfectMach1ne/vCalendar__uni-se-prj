@@ -8,7 +8,9 @@ export default {
     }
   },
   methods: {
-    
+    cancel() {
+      this.$router.push('/')
+    } 
   }
 }
 </script>
@@ -16,7 +18,10 @@ export default {
 <template>
   <div class="event__page__container">
     <div class="event__page__box">
-      
+      <div class="event__page__buttons">
+        <button>Remove</button>
+        <button @click="cancel">Cancel</button>
+      </div>
     </div>
   </div>
 </template>
