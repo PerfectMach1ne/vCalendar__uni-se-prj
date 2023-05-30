@@ -247,9 +247,10 @@ button.tools__button:not(:hover) {
   flex-direction: column; /* ensure all is aligned in a column */
   align-content: center; /*  */
   align-items: center; /* centers item; justify-content does everything wrong, "in the column-specific way" */
+  gap: 15px;
   margin: 5px;
   border: 1px solid gray;
-  padding: 5px;
+  padding: 15px;
   min-height: 77.6vh;
   width: 35%;
 }
