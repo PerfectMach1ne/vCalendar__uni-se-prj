@@ -95,6 +95,11 @@ footer {
 }
 
 .tools__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-content: flex-start; */
+  align-items: flex-start;
   margin: 5px;
   border: 1px solid gray;
   padding: 5px;
@@ -228,4 +233,23 @@ button.tools__button:not(:hover) {
   min-width: 150px;
   text-align: center;
   vertical-align: middle;
+}
+
+/***************************************** Event-related pages styling */
+
+.event__page__container {
+  display: flex;
+  justify-content: center;
+}
+
+.event__page__box {
+  display: flex;
+  flex-direction: column; /* ensure all is aligned in a column */
+  align-content: center; /*  */
+  align-items: center; /* centers item; justify-content does everything wrong, "in the column-specific way" */
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  min-height: 77.6vh;
+  width: 35%;
 }

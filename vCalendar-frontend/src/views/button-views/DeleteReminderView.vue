@@ -9,5 +9,9 @@ export default {
 </script>
 
 <template>
-  delete reminder page placeholder text
+  <div class="event__page__container">
+    <div class="event__page__box">
+      
+    </div>
+  </div>
 </template>

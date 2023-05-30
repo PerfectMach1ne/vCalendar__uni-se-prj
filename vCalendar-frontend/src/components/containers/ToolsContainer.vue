@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div class="tools__container">
+  <div class="tools__container scrollbar">
     <AddReminder />
     <AddTask />
     <DeleteReminder />
