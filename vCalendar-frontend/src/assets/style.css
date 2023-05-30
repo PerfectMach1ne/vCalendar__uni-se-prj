@@ -292,4 +292,27 @@ button.change__week:not(:hover) {
   padding: 15px;
   min-height: 77.6vh;
   width: 35%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+div.event__page__box > button {
+  margin: 0;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: aquamarine;
+  font-size: 1rem;
+  color: #000;
+}
+
+div.event__page__box > button:hover {
+  background-color: turquoise;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+div.event__page__box > button:not(:hover) {
+  transition: all 0.3s ease;
 }

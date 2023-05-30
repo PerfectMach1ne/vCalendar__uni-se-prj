@@ -1,9 +1,14 @@
 <script>
 export default {
+  props: [],
+  emits: [],
   data() {
     return {
 
     }
+  },
+  methods: {
+    
   }
 }
 </script>

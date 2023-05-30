@@ -60,12 +60,15 @@ export default {
     getWeekSpecificDateFoolproof(dayOffset) {
       var currentDate = new Date(); // get current date
 
-      var returnDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), + dayOffset).getDate();
+      // THIS IS NOT CALCULATING THE DAY IN THE DAY PART CORRECTLY; FIX THIS
+      var returnDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), dayOffset).getDate();
 
       return returnDate;
     },
     // ChangeWeek.vue events
     goToPastWeek() {
+      var currentDate = new Date(); // get current date
+      var gotoDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), ); // get destination date
       console.log("goToPastWeek ToDo")
     },
     goToFutureWeek() {
