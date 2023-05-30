@@ -1,13 +1,18 @@
 <script>
+import ChangeWeek from './buttons/ChangeWeek.vue'
+
 export default {
+  components: { ChangeWeek },
   data() {
     return {
       weekdayBoxWidth: '',
-      currentWeek: 18, // throwaway default value 
-      currentMonths: 'Aug - Sep', // throwaway default value 
+      currentWeek: 18, // throwaway default value
+      currentMonths: 'Aug - Sep', // throwaway default value
       currentFirstWeekday: 0,
       currentLastWeekday: 0,
-      currentYear: 2020, // throwaway default value 
+      currentYear: 2020, // throwaway default value
+      left: "&#10094;",
+      right: "&#10095;"
     }
   },
   computed: {
@@ -68,7 +73,7 @@ export default {
     this.currentLastWeekday = this.getFirstLastWeekday()[1];
     this.currentYear = this.getTodaysYear();
 
-    // silly testing
+    // silly print testing
     console.log(this.currentWeek + ', ' + this.currentMonths + ', ' + this.currentFirstWeekday + ', ' + this.currentLastWeekday + ', ' + this.currentYear)
     
     // Easy fix for yearmonth__display class element being sized correctly - steal weekday__box's width after render. >:)
@@ -84,9 +89,13 @@ export default {
       <div class="lazy__filler__box" :style="{
         width: '15px'
       }"></div>
-      <span>&#10094;</span> <!-- move "left" button -->
-      <span>&#10095;</span> <!-- move "right" button -->
-      <span>&bull;</span>
+      <ChangeWeek :character="left" />
+      <!-- <span>&#10094;</span> move "left" button -->
+      <ChangeWeek :character="right" />
+      <!-- <span>&#10095;</span> move "right" button -->
+      <div class="lazy__filler__box" :style="{
+        width: '7px'
+      }"></div>
       <span id="year__label">{{ currentYear }}</span>
       <span>&bull;</span>
       <span id="month__label">{{ currentMonths }}</span>
