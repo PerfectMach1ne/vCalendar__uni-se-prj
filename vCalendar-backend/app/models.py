@@ -17,9 +17,9 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
 
-    modified_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'),
+    modified_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('DATE(\'now\')'),
                          onupdate=text('current_timestamp()'))
-    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('DATE(\'now\')'))
 
 
 class Calendar(Base):
@@ -30,11 +30,11 @@ class Calendar(Base):
     title = Column(String, index=True)
 
     user_id = Column(Integer, ForeignKey('users.id'))
-    user = relationship("User", back_populates="calendar")
+    user = relationship("User")
 
-    modified_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'),
+    modified_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('DATE(\'now\')'),
                          onupdate=text('current_timestamp()'))
-    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('DATE(\'now\')'))
 
 
 # class EventGroup(Base):

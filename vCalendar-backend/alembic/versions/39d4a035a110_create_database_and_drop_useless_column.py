@@ -18,6 +18,7 @@ depends_on = None
 
 def upgrade() -> None:
     op.drop_table("_database_generator_table")
+    pass
 
 
 def downgrade() -> None:
