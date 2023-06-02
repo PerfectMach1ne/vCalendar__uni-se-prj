@@ -1,16 +1,23 @@
-from pydantic import BaseModel
+from datetime import datetime
+
+from pydantic import BaseModel, EmailStr
 
 
-class UserBase(BaseModel):
-    email: str
+# ****************************** User schemas
+class UserLogin(BaseModel):
+    email: EmailStr
+    hashed_password: str
 
 
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
+    email: EmailStr
     password: str
 
 
-class User(UserBase):
+class UserOut(BaseModel):
     id: int
+    calendar_id: int
+    created_at: datetime
 
     class Config:
         orm_mode = True
