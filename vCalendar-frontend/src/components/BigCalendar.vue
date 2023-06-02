@@ -28,10 +28,24 @@ export default {
   methods: {
     getTodaysWeek() {
       var currentDate = this.currentDate;
-      
-      var startYearDate = new Date(currentDate.getFullYear(), 0, 1); // get 1st January of today's year
-      var daysInYear = Math.floor( (currentDate - startYearDate) / (24 * 60 * 60 * 1000) ); // count year days passed so far
-      var weekNumeral = Math.round(daysInYear / 7) + 1; // evaluate the number of the week from all days in year
+
+      // https://codepen.io/Venugopal46/pen/WrxdLY?editors=1111
+      // Returns the ISO week of the date.
+      Date.prototype.getWeek = function() {
+        var date = new Date(this.getTime());
+        date.setHours(0, 0, 0, 0);
+        // Thursday in current week decides the year.
+        date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+        // January 4 is always in week 1.
+        var week1 = new Date(date.getFullYear(), 0, 4);
+        // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+        return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+      }
+      var weekNumeral = currentDate.getWeek();
+
+      // var startYearDate = new Date(currentDate.getFullYear(), 0, 1); // get 1st January of today's year
+      // var daysInYear = Math.round( (currentDate - startYearDate) / (24 * 60 * 60 * 1000) ); // count year days passed so far
+      // var weekNumeral = Math.ceil(daysInYear / 7); // evaluate the number of the week from all days in year
 
       return weekNumeral;
     },
