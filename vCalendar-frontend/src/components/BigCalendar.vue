@@ -52,13 +52,16 @@ export default {
     getTodaysMonths() {
       var currentDate = this.currentDate;
 
-      // (current day) - (how many days of the week have already "taken place") + 1 correction day
-      var firstWeekdayMonth = currentDate.getMonth(); // evaluate month at first day of the week
       // called "firstMonthDay" and not "firstWeekDay" because it's a day numeral in relation to the month;
       // probably done by me to avoid confusion with "weekdays" which should range from 1 to 7 
-      var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1; // evaluate the first day of today's week
-      var lastWeekdayMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + 6).getMonth(); // evaluate month at last day of the week
+      var firstMonthDay = currentDate.getDate() - (currentDate.getDay() || 7) + 1; // evaluate the first day of today's week
+      currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay);
+      firstMonthDay = currentDate.getDate() - (currentDate.getDay() || 7) + 1;
+      // This above has to be done, because setting firstMonthDay to this.currentFirstWeekday just breaks things
 
+      var firstWeekdayMonth = currentDate.getMonth(); // evaluate month at first day of the week
+      var lastWeekdayMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + 6).getMonth(); // evaluate month at last day of the week
+      
       if (firstWeekdayMonth == lastWeekdayMonth)
         return this.monthNames[firstWeekdayMonth];
       else
@@ -66,16 +69,22 @@ export default {
     },
     getFirstWeekday() {
       var currentDate = this.currentDate;
-      var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1;
-      
-      // (current day) - (how many days of the week have already "taken place") + 1 correction day
-      // var firstMonthDay = currentDate.getDate() - currentDate.getDay() + 1; // evaluate the first day of today's week
-      
+
+      var firstMonthDay = currentDate.getDate() - (currentDate.getDay() || 7) + 1;
+      currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay);
+      firstMonthDay = currentDate.getDate() - (currentDate.getDay() || 7) + 1; // for some reason this fixes a bug on first load that ends up returning -2
+        
       return firstMonthDay;
     },
     getLastWeekday() {
       var currentDate = this.currentDate;
-      var firstMonthDay = this.currentFirstWeekday;
+
+      // Once again, this has to be repeated, as simply reaching out for this.currentFirstWeekday on first load
+      // causes weird behavior I am not nearly experienced and clever enough to comprehend.
+      var firstMonthDay = currentDate.getDate() - (currentDate.getDay() || 7) + 1;
+      currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay);
+      firstMonthDay = currentDate.getDate() - (currentDate.getDay() || 7) + 1; // for some reason this fixes a bug on first load that ends up returning -2
+      
       var lastMonthDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), firstMonthDay + 6).getDate(); // evaluate the last day of today's week
 
       return lastMonthDay;
@@ -130,10 +139,11 @@ export default {
     }
   },
   mounted() {
+    this.currentDate.setHours(0, 0, 0, 0);
     // Load the current data
-    this.currentMonths = this.getTodaysMonths();
     this.currentFirstWeekday = this.getFirstWeekday();
     this.currentLastWeekday = this.getLastWeekday();
+    this.currentMonths = this.getTodaysMonths();
     this.currentYear = this.getTodaysYear();
     this.currentWeek = this.getTodaysWeek();
 
