@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from starlette.exceptions import HTTPException
-from pydantic import EmailStr
 
-from .. import models, schemas
+from .. import models, schemas, oauth2, utils
 from ..database import get_db
 
 router = APIRouter(
@@ -13,7 +12,7 @@ router = APIRouter(
 
 
 @router.get("/{user_id}", response_model=schemas.UserOut)
-def get_user_byid(user_id: int, db: Session = Depends(get_db)):
+def get_user_byid(user_id: int, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
     user = db.query(models.User).filter(models.User.id == user_id).first()
 
     if user is None:
@@ -29,8 +28,8 @@ def get_user_byid(user_id: int, db: Session = Depends(get_db)):
 
 @router.post("/", status_code=status.HTTP_201_CREATED, response_model=schemas.UserOut)
 def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    password = user.hashed_password + "notrlyhashed"  # placeholder for JWT logic
-    user.hashed_password = password  # placeholder for JWT logic
+    password_to_hash = utils.hash_pwd(user.hashed_password)
+    user.hashed_password = password_to_hash  # placeholder for JWT logic
 
     # Create a new user; unpack the models dictionary
     new_user = models.User(**user.dict())
@@ -40,7 +39,6 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     if not(user_check is None):
         raise HTTPException(status_code=status.HTTP_409_CONFLICT,
                             detail=f"User with the email {new_user.email} already exists!")
-
     # The BAD (I tried):
     # new_user = models.User(email=user.email, hashed_password=user.hashed_password)
     

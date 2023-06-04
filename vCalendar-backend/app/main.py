@@ -1,10 +1,10 @@
-from fastapi import Depends, FastAPI
+from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy.orm import Session
+from starlette.exceptions import HTTPException
 
-from . import models, schemas
-from .database import engine, get_db
-from .routers import user
+from . import models
+from .database import engine
+from .routers import auth, user
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -22,10 +22,13 @@ app.add_middleware(
 )
 
 
+app.include_router(auth.router)
 app.include_router(user.router)
+
 
 @app.get("/")  # Decorator that turns root() into an API path operation
 def root():
-    return {"root_message": "helo world"}
+    raise HTTPException(status_code=status.HTTP_418_IM_A_TEAPOT,
+                        detail=f"helo world!!!!! I'm a teapot. I swear.")
 # if __name__ == "__main__":
 #     create_connection(r"D:\Programming\uni-se-prj\vCalendar-backend\database\maindb.db")
