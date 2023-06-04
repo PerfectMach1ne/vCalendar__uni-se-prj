@@ -12,11 +12,13 @@ class UserLogin(BaseModel):
 class UserCreate(BaseModel):
     email: EmailStr
     hashed_password: str
+    name: str
 
 
 class UserOut(BaseModel):
     id: int
     email: EmailStr
+    name: str
     # calendar_id: int
     created_at: datetime
 

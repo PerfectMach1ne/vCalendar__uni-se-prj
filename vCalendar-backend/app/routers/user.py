@@ -13,8 +13,8 @@ router = APIRouter(
 
 
 @router.get("/{user_id}", response_model=schemas.UserOut)
-def get_user(user_id: int, db: Session = Depends(get_db)):
-    user = db.query(models.User).filter(models.User.id == id).first()
+def get_user_byid(user_id: int, db: Session = Depends(get_db)):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
 
     if user is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -34,7 +34,13 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 
     # Create a new user; unpack the models dictionary
     new_user = models.User(**user.dict())
-    
+
+    user_check = db.query(models.User).filter(models.User.email == new_user.email).first()
+
+    if not(user_check is None):
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT,
+                            detail=f"User with the email {new_user.email} already exists!")
+
     # The BAD (I tried):
     # new_user = models.User(email=user.email, hashed_password=user.hashed_password)
     

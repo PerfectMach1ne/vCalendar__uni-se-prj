@@ -9,13 +9,15 @@ from .database import Base
 #     column = Column(String, primary_key=True)
 #
 
+
 class User(Base):
     __tablename__ = "users"
     __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
-    hashed_password = Column(String)
+    hashed_password = Column(String, nullable=False)
+    name = Column(String, nullable=False)
 
     modified_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('DATE(\'now\')'),
                          onupdate=text('current_timestamp()'))
