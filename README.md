@@ -1,5 +1,6 @@
-# uni-se-prj
+# uni-vue-fastapi-cal (formerly uni-se-prj)
 A project for a software engineering "group" project class from semester 6.
+Repo renamed because how that class went was godawful, but I like what I made so let's just say it's a little attempt at deassociating the atrocious experiences from my fondness of this project.
 
 ## Technologies used
 * **Vue.js 3** (front-end JS framework)
