@@ -112,3 +112,5 @@ English translation is located below the Polish requirement list.
 **Cafe Barista**: me
 
 **Scrum/Agile Master**: we don't need this guy.
+
+**Git "Unfucker" Text**: This exact line of text.
