@@ -1,8 +1,9 @@
 <script>
-import ChangeWeek from './buttons/ChangeWeek.vue'
+import ChangeWeek from './buttons/ChangeWeek.vue';
+import TodaysWeek from './buttons/TodaysWeek.vue';
 
 export default {
-  components: { ChangeWeek },
+  components: { ChangeWeek, TodaysWeek },
   data() {
     return {
       weekdayBoxWidth: '',
@@ -13,7 +14,8 @@ export default {
       currentLastWeekday: 0,
       currentYear: 2020, // throwaway default value
       left: "&#10094;",
-      right: "&#10095;"
+      right: "&#10095;",
+      today: "&#10022;"
     }
   },
   computed: {
@@ -136,6 +138,16 @@ export default {
 
       // silly print testing
       console.log(this.currentWeek + ', ' + this.currentMonths + ', ' + this.currentFirstWeekday + ', ' + this.currentLastWeekday + ', ' + this.currentYear)
+    },
+    goToTodaysWeek() {
+      this.currentDate = new Date();
+      this.currentDate.setHours(0, 0, 0, 0);
+
+      this.currentFirstWeekday = this.getFirstWeekday();
+      this.currentLastWeekday = this.getLastWeekday();
+      this.currentMonths = this.getTodaysMonths();
+      this.currentYear = this.getTodaysYear();
+      this.currentWeek = this.getTodaysWeek();
     }
   },
   mounted() {
@@ -167,6 +179,9 @@ export default {
         :character="left"
         @past-week="goToPastWeek()" />
       <!-- <span>&#10094;</span> move "left" button -->
+      <TodaysWeek
+        :character="today"
+        @todays-week="goToTodaysWeek()" />
       <ChangeWeek
         :character="right"
         @future-week="goToFutureWeek()" />
